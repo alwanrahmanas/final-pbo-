@@ -78,16 +78,18 @@ public class LoginPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 4, 2));
+        setBackground(new java.awt.Color(18, 18, 18));
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setForeground(new java.awt.Color(19, 18, 18));
         setPreferredSize(new java.awt.Dimension(500, 500));
         setLayout(new java.awt.GridBagLayout());
 
-        jPanel1.setBackground(new java.awt.Color(246, 249, 252));
+        jPanel1.setBackground(new java.awt.Color(30, 29, 29));
         jPanel1.setForeground(new java.awt.Color(221, 221, 221));
 
+        registerButton.setBackground(new java.awt.Color(24, 118, 211));
         registerButton.setFont(new java.awt.Font("Franklin Gothic Book", 0, 12)); // NOI18N
+        registerButton.setForeground(new java.awt.Color(255, 255, 255));
         registerButton.setText("Register");
         registerButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,7 +97,9 @@ public class LoginPanel extends javax.swing.JPanel {
             }
         });
 
+        loginButton.setBackground(new java.awt.Color(24, 118, 211));
         loginButton.setFont(new java.awt.Font("Franklin Gothic Book", 0, 12)); // NOI18N
+        loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Login");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,12 +107,14 @@ public class LoginPanel extends javax.swing.JPanel {
             }
         });
 
+        pwdPassword.setBackground(new java.awt.Color(240, 241, 243));
         pwdPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pwdPasswordActionPerformed(evt);
             }
         });
 
+        nimTextField.setBackground(new java.awt.Color(240, 241, 243));
         nimTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nimTextFieldActionPerformed(evt);
@@ -116,11 +122,11 @@ public class LoginPanel extends javax.swing.JPanel {
         });
 
         jLabel2.setFont(new java.awt.Font("Franklin Gothic Book", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password");
 
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Book", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("NIM");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -220,7 +226,7 @@ public class LoginPanel extends javax.swing.JPanel {
                     
                     data mhs = new data();
                     mhs.setNim(nimb);
-                    JOptionPane.showMessageDialog(this,"Success!");
+                    
                     
                }else{
                    JOptionPane.showMessageDialog(this,"username or password wrong ...");

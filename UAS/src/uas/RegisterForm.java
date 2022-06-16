@@ -68,7 +68,7 @@ public class RegisterForm extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(65, 115, 122));
+        setBackground(new java.awt.Color(30, 29, 29));
         setPreferredSize(new java.awt.Dimension(800, 600));
         setLayout(null);
 
@@ -85,7 +85,7 @@ public class RegisterForm extends javax.swing.JPanel {
             }
         });
         add(pwdRegister);
-        pwdRegister.setBounds(327, 214, 130, 23);
+        pwdRegister.setBounds(327, 214, 170, 23);
 
         konPwdRegister.setFont(new java.awt.Font("Franklin Gothic Book", 0, 12)); // NOI18N
         konPwdRegister.setPreferredSize(new java.awt.Dimension(800, 1000));
@@ -95,7 +95,7 @@ public class RegisterForm extends javax.swing.JPanel {
             }
         });
         add(konPwdRegister);
-        konPwdRegister.setBounds(327, 244, 130, 23);
+        konPwdRegister.setBounds(327, 244, 170, 23);
 
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Book", 0, 35)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -124,31 +124,35 @@ public class RegisterForm extends javax.swing.JPanel {
         add(jLabel4);
         jLabel4.setBounds(194, 244, 119, 16);
 
+        logRegister.setBackground(new java.awt.Color(24, 118, 211));
         logRegister.setFont(new java.awt.Font("Franklin Gothic Book", 0, 12)); // NOI18N
-        logRegister.setText("Login");
+        logRegister.setForeground(new java.awt.Color(255, 255, 255));
+        logRegister.setText("Masuk");
         logRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logRegisterActionPerformed(evt);
             }
         });
         add(logRegister);
-        logRegister.setBounds(330, 290, 130, 26);
+        logRegister.setBounds(330, 350, 170, 26);
 
         jLabel5.setFont(new java.awt.Font("Franklin Gothic Book", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Already have an account?");
+        jLabel5.setText("Sudah memiliki akun?");
         add(jLabel5);
-        jLabel5.setBounds(324, 324, 150, 14);
+        jLabel5.setBounds(350, 330, 150, 14);
 
+        regRegister1.setBackground(new java.awt.Color(24, 118, 211));
         regRegister1.setFont(new java.awt.Font("Franklin Gothic Book", 0, 12)); // NOI18N
-        regRegister1.setText("Register");
+        regRegister1.setForeground(new java.awt.Color(255, 255, 255));
+        regRegister1.setText("Registrasi");
         regRegister1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regRegister1ActionPerformed(evt);
             }
         });
         add(regRegister1);
-        regRegister1.setBounds(330, 350, 130, 26);
+        regRegister1.setBounds(330, 290, 170, 26);
 
         nimRegister.setFont(new java.awt.Font("Franklin Gothic Book", 0, 12)); // NOI18N
         nimRegister.setPreferredSize(new java.awt.Dimension(800, 1000));
@@ -163,7 +167,7 @@ public class RegisterForm extends javax.swing.JPanel {
             }
         });
         add(nimRegister);
-        nimRegister.setBounds(327, 184, 130, 23);
+        nimRegister.setBounds(327, 184, 170, 23);
 
         jLabel6.setFont(new java.awt.Font("Franklin Gothic Book", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -192,7 +196,7 @@ public class RegisterForm extends javax.swing.JPanel {
             }
         });
         add(kelasRegist);
-        kelasRegist.setBounds(327, 155, 130, 23);
+        kelasRegist.setBounds(327, 155, 170, 23);
 
         namaRegist.setFont(new java.awt.Font("Franklin Gothic Book", 0, 12)); // NOI18N
         namaRegist.setPreferredSize(new java.awt.Dimension(800, 1000));
@@ -202,7 +206,7 @@ public class RegisterForm extends javax.swing.JPanel {
             }
         });
         add(namaRegist);
-        namaRegist.setBounds(327, 126, 130, 23);
+        namaRegist.setBounds(327, 126, 170, 23);
 
         errorNama.setBackground(new java.awt.Color(255, 0, 0));
         errorNama.setForeground(new java.awt.Color(255, 255, 255));
@@ -212,12 +216,12 @@ public class RegisterForm extends javax.swing.JPanel {
             }
         });
         add(errorNama);
-        errorNama.setBounds(470, 130, 200, 20);
+        errorNama.setBounds(520, 130, 200, 20);
 
         errorKelas.setBackground(new java.awt.Color(255, 0, 51));
         errorKelas.setForeground(new java.awt.Color(255, 255, 255));
         add(errorKelas);
-        errorKelas.setBounds(470, 160, 200, 20);
+        errorKelas.setBounds(520, 160, 200, 20);
 
         errorNim.setBackground(new java.awt.Color(255, 0, 51));
         errorNim.setForeground(new java.awt.Color(255, 255, 255));
@@ -227,7 +231,7 @@ public class RegisterForm extends javax.swing.JPanel {
             }
         });
         add(errorNim);
-        errorNim.setBounds(470, 190, 200, 20);
+        errorNim.setBounds(520, 190, 200, 20);
 
         errorPassword.setBackground(new java.awt.Color(255, 0, 51));
         errorPassword.setForeground(new java.awt.Color(255, 255, 255));
@@ -237,12 +241,12 @@ public class RegisterForm extends javax.swing.JPanel {
             }
         });
         add(errorPassword);
-        errorPassword.setBounds(470, 220, 200, 20);
+        errorPassword.setBounds(520, 220, 200, 20);
 
         errorKonPassword.setBackground(new java.awt.Color(255, 0, 51));
         errorKonPassword.setForeground(new java.awt.Color(255, 255, 255));
         add(errorKonPassword);
-        errorKonPassword.setBounds(470, 240, 230, 20);
+        errorKonPassword.setBounds(520, 250, 230, 20);
 
         jPanel1.setBackground(new java.awt.Color(206, 208, 210));
 

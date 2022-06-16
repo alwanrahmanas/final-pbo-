@@ -97,7 +97,6 @@ public class HomePanel extends javax.swing.JPanel {
         kategoriComboBox = new javax.swing.JComboBox<>();
         subKategoriComboBox = new javax.swing.JComboBox<>();
         submitButton = new javax.swing.JButton();
-        exportButton = new javax.swing.JButton();
         updateButton = new javax.swing.JButton();
         deleteButton = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
@@ -114,6 +113,8 @@ public class HomePanel extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        exportButton = new javax.swing.JButton();
+        keluarButton = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
@@ -123,6 +124,7 @@ public class HomePanel extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(20, 20, 20));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
+        tanggalKegiatanChooser.setBackground(new java.awt.Color(255, 255, 255));
         tanggalKegiatanChooser.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 tanggalKegiatanChooserMouseReleased(evt);
@@ -133,6 +135,7 @@ public class HomePanel extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Tanggal Kegiatan");
 
+        namaKegiatanTextField.setBackground(new java.awt.Color(255, 255, 255));
         namaKegiatanTextField.setFont(new java.awt.Font("Franklin Gothic Book", 0, 13)); // NOI18N
         namaKegiatanTextField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -144,6 +147,7 @@ public class HomePanel extends javax.swing.JPanel {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Nama Kegiatan");
 
+        tempatKegiatanTextField.setBackground(new java.awt.Color(255, 255, 255));
         tempatKegiatanTextField.setFont(new java.awt.Font("Franklin Gothic Book", 0, 13)); // NOI18N
         tempatKegiatanTextField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -192,8 +196,15 @@ public class HomePanel extends javax.swing.JPanel {
                 subKategoriComboBoxItemStateChanged(evt);
             }
         });
+        subKategoriComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subKategoriComboBoxActionPerformed(evt);
+            }
+        });
 
+        submitButton.setBackground(new java.awt.Color(255, 255, 255));
         submitButton.setFont(new java.awt.Font("Franklin Gothic Book", 0, 13)); // NOI18N
+        submitButton.setForeground(new java.awt.Color(0, 0, 0));
         submitButton.setText("Submit");
         submitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,15 +212,9 @@ public class HomePanel extends javax.swing.JPanel {
             }
         });
 
-        exportButton.setFont(new java.awt.Font("Franklin Gothic Book", 0, 13)); // NOI18N
-        exportButton.setText("Export");
-        exportButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exportButtonActionPerformed(evt);
-            }
-        });
-
+        updateButton.setBackground(new java.awt.Color(255, 255, 255));
         updateButton.setFont(new java.awt.Font("Franklin Gothic Book", 0, 13)); // NOI18N
+        updateButton.setForeground(new java.awt.Color(0, 0, 0));
         updateButton.setText("Update");
         updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,7 +222,9 @@ public class HomePanel extends javax.swing.JPanel {
             }
         });
 
+        deleteButton.setBackground(new java.awt.Color(255, 255, 255));
         deleteButton.setFont(new java.awt.Font("Franklin Gothic Book", 0, 13)); // NOI18N
+        deleteButton.setForeground(new java.awt.Color(0, 0, 0));
         deleteButton.setText("Delete");
         deleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,21 +245,18 @@ public class HomePanel extends javax.swing.JPanel {
                 .addComponent(deleteButton)
                 .addGap(18, 18, 18)
                 .addComponent(updateButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(submitButton)
-                .addGap(12, 12, 12)
-                .addComponent(exportButton)
-                .addGap(29, 29, 29))
+                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(75, 75, 75)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel7)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(subKategoriComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(kategoriComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dimensiComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(subKategoriComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(kategoriComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(dimensiComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel4)
@@ -303,7 +307,6 @@ public class HomePanel extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(exportButton)
                             .addComponent(submitButton)
                             .addComponent(updateButton)
                             .addComponent(deleteButton))
@@ -396,7 +399,9 @@ public class HomePanel extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -443,6 +448,30 @@ public class HomePanel extends javax.swing.JPanel {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("SIPADU ");
 
+        exportButton.setBackground(new java.awt.Color(255, 255, 255));
+        exportButton.setFont(new java.awt.Font("Franklin Gothic Book", 0, 13)); // NOI18N
+        exportButton.setForeground(new java.awt.Color(0, 0, 0));
+        exportButton.setText("Ekspor");
+        exportButton.setMinimumSize(new java.awt.Dimension(68, 28));
+        exportButton.setPreferredSize(new java.awt.Dimension(68, 27));
+        exportButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exportButtonActionPerformed(evt);
+            }
+        });
+
+        keluarButton.setBackground(new java.awt.Color(255, 51, 51));
+        keluarButton.setFont(new java.awt.Font("Franklin Gothic Book", 0, 13)); // NOI18N
+        keluarButton.setForeground(new java.awt.Color(0, 0, 0));
+        keluarButton.setText("Keluar");
+        keluarButton.setMinimumSize(new java.awt.Dimension(68, 28));
+        keluarButton.setPreferredSize(new java.awt.Dimension(68, 27));
+        keluarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                keluarButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -454,14 +483,19 @@ public class HomePanel extends javax.swing.JPanel {
                         .addGap(6, 6, 6)
                         .addComponent(jLabel10))
                     .addComponent(jLabel9))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                        .addGap(318, 318, 318)
+                        .addComponent(jLabel8)
+                        .addContainerGap(566, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(427, 427, 427)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(318, 318, 318)
-                        .addComponent(jLabel8)))
-                .addContainerGap(566, Short.MAX_VALUE))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(exportButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(keluarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(202, 202, 202))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -469,7 +503,10 @@ public class HomePanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel2)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(keluarButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(exportButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
@@ -510,6 +547,8 @@ public class HomePanel extends javax.swing.JPanel {
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         // TODO add your handling code here:
         
+        //check();
+        
         Mahasiswa mhs = new Mahasiswa();
         //Mahasiswa m = new Mahasiswa();
         
@@ -533,7 +572,7 @@ public class HomePanel extends javax.swing.JPanel {
         try {
                 Database.getInstance().insertIPKM(mhs);
                 JOptionPane.showMessageDialog(this, "Sukses Tersimpan");
-                submitButton.setEnabled(true);
+                
                 
                 
             } catch (SQLException ex) {
@@ -551,7 +590,7 @@ public class HomePanel extends javax.swing.JPanel {
             System.out.println("Kalendar belum dipilih");
         }
             
-        submitButton.setEnabled(true);updateButton.setEnabled(true);    
+        check(); 
         
         
         
@@ -560,8 +599,8 @@ public class HomePanel extends javax.swing.JPanel {
 
     private void dimensiComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_dimensiComboBoxItemStateChanged
          //hapus(kategoriComboBox);
-       
-         
+     
+         check();
 
     }//GEN-LAST:event_dimensiComboBoxItemStateChanged
 
@@ -610,9 +649,9 @@ public class HomePanel extends javax.swing.JPanel {
 }
     private void kategoriComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_kategoriComboBoxItemStateChanged
         // TODO add your handling code here:
-        
+     
 
-
+check();
     }//GEN-LAST:event_kategoriComboBoxItemStateChanged
 
     private void kategoriComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kategoriComboBoxActionPerformed
@@ -738,6 +777,8 @@ public class HomePanel extends javax.swing.JPanel {
         subKategoriComboBox.addItem("Sub-kategori");}
          
       }
+      
+      check();
     }//GEN-LAST:event_kategoriComboBoxActionPerformed
 
     private void dimensiComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dimensiComboBoxActionPerformed
@@ -806,7 +847,7 @@ public class HomePanel extends javax.swing.JPanel {
         subKategoriComboBox.addItem("Sub-kategori");
         int m = kategoriComboBox.getItemCount();
           hapus(kategoriComboBox,m);}
-         
+        check(); 
         
         
     }//GEN-LAST:event_dimensiComboBoxActionPerformed
@@ -854,6 +895,8 @@ public class HomePanel extends javax.swing.JPanel {
         try {
             // TODO add your handling code here:
             tahunComboBox.setSelectedIndex(0);
+            
+            cariTextField.setText("");
             loadTableData();
             
         } catch (SQLException | IOException ex) {
@@ -963,30 +1006,18 @@ public class HomePanel extends javax.swing.JPanel {
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
         // TODO add your handling code here:
-        int i = ipkmTable.getSelectedRow();
-         if (i ==-1){
-             return;
-         }
-         
-        String nama = ipkmTable.getValueAt(i,0).toString(); 
-        String tempat = ipkmTable.getValueAt(i,2).toString(); 
-        String sk = ipkmTable.getValueAt(i,3).toString();
-         
-         try {
-            id = Database.getInstance().getId(nim,nama,sk,tempat);
-        } catch (SQLException ex) {
-            Logger.getLogger(HomePanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-         
-        try {
-            Database.getInstance().deleteIPKM(id);
-            JOptionPane.showMessageDialog(this,"Deleted!");
-            loadTableData();
-            
-        } catch (SQLException | IOException ex) {
-            Logger.getLogger(HomePanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
         
+        
+        int opsi = JOptionPane.showConfirmDialog(null, "Apa Anda yakin akan menghapus baris ini?", 
+                "Penghapusan Data", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        
+         if (opsi == JOptionPane.YES_OPTION){
+             int i = ipkmTable.getSelectedRow();
+                if (i ==-1){
+                return;
+                }
+                deleteButton(i);
+                }
     }//GEN-LAST:event_deleteButtonActionPerformed
 
     private void ipkmTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ipkmTableMouseClicked
@@ -1022,7 +1053,7 @@ public class HomePanel extends javax.swing.JPanel {
 
     private void tanggalKegiatanChooserMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tanggalKegiatanChooserMouseReleased
         // TODO add your handling code here:
-       
+       check();
     }//GEN-LAST:event_tanggalKegiatanChooserMouseReleased
 
     private void namaKegiatanTextFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_namaKegiatanTextFieldKeyReleased
@@ -1036,15 +1067,19 @@ public class HomePanel extends javax.swing.JPanel {
             jLabel12.setText("input tidak boleh mengandung karakter spesial");
             updateButton.setEnabled(false);
             submitButton.setEnabled(false);
-        }else{
-            jLabel12.setText("");
+        }else if(namaKegiatanTextField.getText()==""){
+           jLabel12.setText("input tidak boleh kosong ");
+            updateButton.setEnabled(false);
+            submitButton.setEnabled(false); 
         }
+        
+        check();
     }//GEN-LAST:event_namaKegiatanTextFieldKeyReleased
 
     private void tempatKegiatanTextFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tempatKegiatanTextFieldKeyReleased
         // TODO add your handling code here:
         String REGEX = ".*[&%$#@!~]+.*";
-        if(tempatKegiatanTextField.getText()==null   ){
+        if(tempatKegiatanTextField.getText()==""   ){
             jLabel13.setText("Tempat kegiatan tidak boleh kosong ");
             updateButton.setEnabled(false);
             submitButton.setEnabled(false);
@@ -1055,11 +1090,24 @@ public class HomePanel extends javax.swing.JPanel {
         }else{
             jLabel13.setText("");
         }
+        check();
     }//GEN-LAST:event_tempatKegiatanTextFieldKeyReleased
 
     private void subKategoriComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_subKategoriComboBoxItemStateChanged
         // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_subKategoriComboBoxItemStateChanged
+
+    private void subKategoriComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subKategoriComboBoxActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_subKategoriComboBoxActionPerformed
+
+    private void keluarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluarButtonActionPerformed
+        // TODO add your handling code here:
+        contentScrollPane.setViewportView(new LoginPanel(contentScrollPane));
+    }//GEN-LAST:event_keluarButtonActionPerformed
     
     public void tampilTahun(String bagian) throws IOException{
         
@@ -1297,15 +1345,15 @@ public class HomePanel extends javax.swing.JPanel {
     else if("Pelatihan dan Pengabdian Masyarakat".equals(i)){
         
                
-                subKategoriComboBox.addItem("Mengikuti kegiatan\n" +
+                subKategoriComboBox.addItem("Mengikuti kegiatan \n" +
 " Seminar/Lokakarya/Pelatihan\n" +
 " Sosial dan Pengabdian Masyarakat\n" +
 " Tingkat Internasional");
-                subKategoriComboBox.addItem("Mengikuti kegiatan\n" +
+                subKategoriComboBox.addItem("Mengikuti kegiatan \n" +
 " Seminar/Lokakarya/Pelatihan\n" +
 " Sosial dan Pengabdian Masyarakat\n" +
 " Tingkat Nasional");
-                subKategoriComboBox.addItem("Mengikuti kegiatan\n" +
+                subKategoriComboBox.addItem("Mengikuti kegiatan \n" +
 " Seminar/Lokakarya/Pelatihan\n" +
 " Sosial dan Pengabdian Masyarakat\n" +
 " Tingkat Regional/Provinsi");
@@ -1333,8 +1381,8 @@ public class HomePanel extends javax.swing.JPanel {
         
                
                     subKategoriComboBox.addItem("Peserta kegiatan terbuka yang\n" +
-"diselenggarakan\n" +
-"SEMA/UKM/Bidang");
+" diselenggarakan\n" +
+" SEMA/UKM/Bidang");
                 
                    
                 
@@ -1342,17 +1390,17 @@ public class HomePanel extends javax.swing.JPanel {
     else if("Peserta Seminar".equals(i)){
         
                 subKategoriComboBox.addItem("Mengikuti kegiatan\n" +
-"seminar/lokakarya/pelatihan\n" +
-"tingkat internasional");
+" seminar/lokakarya/pelatihan\n" +
+" tingkat internasional");
                 subKategoriComboBox.addItem("Mengikuti kegiatan\n" +
-"seminar/lokakarya/pelatihan\n" +
-"tingkat nasional");
+" seminar/lokakarya/pelatihan\n" +
+" tingkat nasional");
                 subKategoriComboBox.addItem("Mengikuti kegiatan\n" +
-"seminar/pelatihan/lokakarya\n" +
-"tingkat regional/provinsi");
+" seminar/pelatihan/lokakarya\n" +
+" tingkat regional/provinsi");
                 subKategoriComboBox.addItem("Mengikuti kegiatan\n" +
-"seminar/pelatihan/lokakarya\n" +
-"tingkat kabupaten/kota/kampus");
+" seminar/pelatihan/lokakarya\n" +
+" tingkat kabupaten/kota/kampus");
                 
     }
                 
@@ -1441,8 +1489,47 @@ public class HomePanel extends javax.swing.JPanel {
        
         
 }
- 
     
+    public void deleteButton(int i){
+         
+         
+        String nama = ipkmTable.getValueAt(i,0).toString(); 
+        String tempat = ipkmTable.getValueAt(i,2).toString(); 
+        String sk = ipkmTable.getValueAt(i,3).toString();
+         
+         try {
+            id = Database.getInstance().getId(nim,nama,sk,tempat);
+        } catch (SQLException ex) {
+            Logger.getLogger(HomePanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         
+        try {
+            Database.getInstance().deleteIPKM(id);
+            JOptionPane.showMessageDialog(this,"Deleted!");
+            loadTableData();
+            
+        } catch (SQLException | IOException ex) {
+            Logger.getLogger(HomePanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    private void check(){
+        String nama= namaKegiatanTextField.getText();
+        String tempat = tempatKegiatanTextField.getText();
+        //String tanggal = tanggalKegiatanChooser.getDate().toString();
+        String dimensi = dimensiComboBox.getSelectedItem().toString();
+        String kategori = kategoriComboBox.getSelectedItem().toString();
+        String subKategori = subKategoriComboBox.getSelectedItem().toString();
+        if(("".equals(nama)||"".equals(tempat)||kategori== "Kategori"||dimensi=="Dimensi"||subKategori=="Sub-kategori")){
+            submitButton.setEnabled(false);
+            updateButton.setEnabled(false);
+        }else if((!"".equals(nama)&&!"".equals(tempat)&&kategori!= "Kategori"&&dimensi!="Dimensi"&&subKategori!="Sub-kategori")){
+            submitButton.setEnabled(true);
+            updateButton.setEnabled(true);
+        }
+    }
+ 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField cariTextField;
     private javax.swing.JButton deleteButton;
@@ -1467,6 +1554,7 @@ public class HomePanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> kategoriComboBox;
+    private javax.swing.JButton keluarButton;
     private javax.swing.JTextField namaKegiatanTextField;
     private javax.swing.JComboBox<String> subKategoriComboBox;
     private javax.swing.JButton submitButton;
